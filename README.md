@@ -33,14 +33,24 @@ https://github.com/4GeeksAcademy/react-hello
 </onlyfor>
 
 ## 📝 Instructions:
+Your TODO List application must stay synchronized with the backend whenever a task is added or deleted. Additionally, it should include a cleanup button that removes the entire list from the server and updates the frontend with an empty list.
 
-- Make your to-do list sync with the backend API every time a task is added or deleted.
-- Add a clean all tasks button that will `DELETE` the user from the server and empty the todo list on the front-end.
+## 👉 Key Integration Moments:
+1. Load tasks on startup (useEffect)
+• Use GET /users/{user_name} to fetch the task list and update the state.
 
-There are 3 critical moments in the application timeline (a.k.a. The runtime) to focus on while integrating this API:
-- **After the list loads empty for the first time (`useEffect`)**: You should fetch (`GET`) the data from the API and update the tasks when the information finally arrives.
-- **When a new task is added**: You should `PUT` the new list on the server.
-- **When a task is removed**: You should `PUT` the new list on the server.
+2. Add a task
+• Use POST /todos/{user_name} to add a new task.
+• Then, use GET to refresh the list.
+
+3. Delete a task
+• Use DELETE /todos/{todo_id} and then GET to update the list.
+
+4. Delete all tasks (Cleanup button) 🅇
+• Use DELETE on each task or an endpoint to clear everything.
+• Then, use GET to reflect the changes in the interface.
+
+☝️ Make sure to create a user before adding tasks. 🚀
 
 ## 💡 Hint:
 
