@@ -35,21 +35,21 @@ https://github.com/4GeeksAcademy/react-hello
 ## 📝 Instrucciones :
 Tu aplicación de TODO List debe mantenerse sincronizada con el backend cada vez que se agregue o elimine una tarea. Además, debe incluir un botón de limpieza que elimine toda la lista en el servidor y actualice el frontend con una lista vacía.
 
- ##👉 Momentos clave para la integración :
+ ## 👉 Momentos clave para la integración :
  
 1. Cargar tareas al iniciar (useEffect)
-   • Usa el método GET /users/{user_name} para obtener la lista y actualizar el estado.
+   - Usa el método GET /users/{user_name} para obtener la lista y actualizar el estado.
 
 2. Agregar una tarea
-   • Usa POST /todos/{user_name} para añadir una nueva tarea.
-   •Luego, usa GET para actualizar la lista.
+   - Usa POST /todos/{user_name} para añadir una nueva tarea.
+   - Luego, usa GET para actualizar la lista.
 
 3. Eliminar una tarea
-   •Usa DELETE /todos/{todo_id} y luego GET para actualizar la lista.
+   - Usa DELETE /todos/{todo_id} y luego GET para actualizar la lista.
    
 4. Eliminar todas las tareas (Botón de limpieza)🅇
-   •Usa DELETE en cada tarea o un endpoint para limpiar todo.
-   •Luego, usa GET para reflejar los cambios en la interfaz.
+   - Usa DELETE en cada tarea o un endpoint para limpiar todo.
+   -Luego, usa GET para reflejar los cambios en la interfaz.
 
  ## ☝️Asegúrate de crear un usuario antes de añadir tareas.
 
